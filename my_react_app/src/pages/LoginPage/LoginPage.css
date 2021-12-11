@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    background-image: linear-gradient(rgba(79, 79, 79, 0.2), rgba(51, 51, 51, 0.3)), url("img/bg.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.login {
+    width: 500px;
+    height: 400px;
+    background: #FFFFFF;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    color: #704a2d;
+    margin-top: 82px;
+    padding: 0 40px 20px;
+}
+
+.login__title {
+    font-size: 35px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.login__label-email,
+.login__label-password {
+    font-size: 16px;
+    align-self: flex-start;
+    padding-left: 15px;
+    margin-bottom: 3px;
+}
+
+.login__email-wrapper,
+.login__password-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.login__required-sign {
+    align-self: flex-start;
+    font-size: 18px;
+    padding-right: 2px;
+}
+
+.login__input {
+    align-self: flex-start;
+    border-radius: 25px;
+    border: 2px solid #704a2d;
+    width: 100%;
+    height: 49px;
+    padding: 5px 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.login__valid {
+    align-self: flex-start;
+    padding-left: 8px;
+    margin-bottom: 10px;
+    height: 22px;
+    font-size: 10px;
+}
+
+.login__email-warning,
+.login__password-warning {
+    display: none;
+    color: #CB2424;
+}
+
+.login__input::placeholder {
+    color: #ccc;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.login__checkbox-wrapper {
+    position: relative;
+    display: flex;
+    align-self: flex-start;
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+.login__checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 32px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.login__checkbox-mark {
+    width: 24px;
+    height: 24px;
+    border: 2px solid;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.login__checkbox-wrapper > .login__checkbox:checked + .login__checkbox-mark::after {
+    content: '✓';
+    position: absolute;
+    z-index: 1;
+    left: 6px;
+}
+
+.login__checkbox-label {
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: normal;
+    padding-top: 5px;
+    padding-left: 10px;
+    flex-shrink: 1;
+}
+
+.invalid-input {
+    border: 2px solid #CB2424;
+}
+
+.invalid-text {
+    color: #CB2424;
+}
+
+.enter-link {
+    color: #fff;
+    text-decoration: none;
+}

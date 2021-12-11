@@ -1,0 +1,17 @@
+.footer {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
+.contact-email {
+    text-decoration: none;
+    color: #007adf;
+}
+
+.contact-phone {
+    font-size: 20px;
+    text-decoration: none;
+    color: #704a2d;
+}
