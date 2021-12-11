@@ -5,6 +5,10 @@
     box-shadow: 0 0 10px 0 #ccc;
 }
 
+.card:hover {
+    border: 1px solid #be784a;
+}
+
 .card__image {
     margin-bottom: 15px;
 }
