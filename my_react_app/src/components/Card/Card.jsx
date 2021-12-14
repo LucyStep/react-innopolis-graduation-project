@@ -1,15 +1,23 @@
+import React from 'react';
 import './Card.css';
 import Button from '../Button/Button';
 import {useDispatch} from 'react-redux';
-import {increment} from '../../app/reducers/counter';
+import {addItem} from '../../app/basket/basket.actions';
+import {connect} from 'react-redux';
 
 function Card({
-    image = '',
-    name = '',
-    description = '',
-    price = 0 + '₽'
-  }) {
+                id = 0,
+                image = '',
+                name = '',
+                description = '',
+                price = 0
+              }) {
+
   const dispatch = useDispatch();
+  const addItemDispatcher = () => {
+    dispatch(addItem(id,image, name, price));
+  };
+
   return (
     <div className={'card'}>
       <div className={'card__image'}>
@@ -21,14 +29,19 @@ function Card({
           <div className={'card-description'}>{description}</div>
         </div>
         <div className={'card-buy'}>
-          <div className={'card-price'}>{price}</div>
-          <Button card onClick={() => dispatch(increment())}>
-            В корзину
-            </Button>
+          <div className={'card-price'}>{price} ₽</div>
+          <Button
+            card
+            onClick={addItemDispatcher}
+          />
         </div>
       </div>
     </div>
   )
 }
 
-export default Card;
+const mapDispatchToProps = dispatch => ({
+  addItem: item => dispatch(addItem(item))
+})
+
+export default connect(null, mapDispatchToProps)(Card);

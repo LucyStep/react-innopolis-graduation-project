@@ -1,5 +1,5 @@
 .button {
-    background-color: #704a2d;
+    background-color: #7a49a1;
     outline: none;
     border: none;
     border-radius: 25px;
@@ -11,29 +11,42 @@
 
 .button:hover,
 .button_card:hover {
-    background-color: rgba(117, 76, 38, 0.9);
+    background-color: rgba(136, 67, 183, 0.9);
 }
 
 .button:focus,
 .button_card:focus {
     outline: none;
-    border: 1px solid #5d5d5d;
+    border: 1px solid #ffffff;
 }
 
 .button_card {
-    width: 100%;
-    margin-bottom: auto;
+    width: 50px;
+    height: 50px;
     border: none;
-    border-radius: 0;
-    background-color: #704a2d;
+    background-color: #7a49a1;
 }
 
-.button_card_added {
-    width: 100%;
-    margin-bottom: auto;
-    border: none;
-    border-radius: 0;
-    background-color: #51a236;
+.button_card::before {
+    content: '+';
+    position: absolute;
+    font-size: 25px;
+    top: 20px;
+    right: 47px;
+}
+
+.button_card-added {
+    width: 50px;
+    height: 50px;
+    background-color: #6ec056;
+}
+
+.button_card-added::before {
+    content: '✓';
+    position: absolute;
+    font-size: 25px;
+    top: 17px;
+    right: 44px;
 }
 
 .button_login {

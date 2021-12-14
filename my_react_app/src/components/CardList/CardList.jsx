@@ -18,7 +18,7 @@ export default class CardList extends React.Component {
                   image={product.image}
                   name={product.name}
                   description={product.description}
-                  price={`${product.price} ₽`}/>
+                  price={product.price}/>
               </div>
             )
           })

@@ -1,12 +1,14 @@
 import React from 'react';
 import './Header.css';
 import logo from './images/logo.png';
-import basket from './images/basket.png';
+import basketImg from './images/basket.png';
 import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux';
+import store from '../../app/store';
 
 function Header() {
-  const count = useSelector((state) => state.counter.value);
+  const {basket} = useSelector(store.getState)
+
   return (
     <header className={'header'}>
       <div className={'logo'}>
@@ -16,12 +18,12 @@ function Header() {
       <div className={'basket'}>
         <div className={'counter'}>
           <span className={'items-counter'}>
-            товаров: {count}
+            товаров: {basket.itemsCount}
           </span>
-          <span className={'sum-counter'}>на сумму 2499 ₽</span>
+          <span className={'sum-counter'}>на сумму {basket.totalPrice} ₽</span>
         </div>
         <Link to={'/basket'} className={'basket-page-link'}>
-          <img className={'basket__image'} src={basket} alt="Корзина"/>
+          <img className={'basket__image'} src={basketImg} alt="Корзина"/>
         </Link>
       </div>
     </header>

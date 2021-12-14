@@ -1,25 +1,21 @@
 import React from 'react';
 import BasketItem from '../BasketItem/BasketItem';
+import {useSelector} from "react-redux";
+import store from "../../app/store";
 
-export default class BasketItemsList extends React.Component {
-  static defaultProps = {
-    productList: []
-  }
-  render() {
+export default function BasketItemsList({items = []}) {
+  const {basket} = useSelector(store.getState);
     return (
       <div className={'items-list'}>
-        {
-          this.props.productList.map((product) => {
-            return (
-              <BasketItem key={product.id}
-                id={product.id}
-                image={product.image}
-                name={product.name}
-                price={`${product.price} ₽`}/>
-            )
-          })
-        }
+        {basket.basketItems.map ((product) => (
+          <BasketItem
+            key={product.id}
+            id={product.id}
+            image={product.image}
+            name={product.name}
+            price={`${product.price} ₽`}
+          />
+        ))}
       </div>
     )
-  }
 }
