@@ -13,7 +13,7 @@ export default function BasketItemsList({items = []}) {
             id={product.id}
             image={product.image}
             name={product.name}
-            price={`${product.price} ₽`}
+            price={product.price}
           />
         ))}
       </div>

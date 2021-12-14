@@ -15,7 +15,7 @@ function Card({
 
   const dispatch = useDispatch();
   const addItemDispatcher = () => {
-    dispatch(addItem(id,image, name, price));
+    dispatch(addItem(id, image, name, price));
   };
 
   return (
