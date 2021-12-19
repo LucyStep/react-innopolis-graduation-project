@@ -4,6 +4,7 @@ import Button from '../Button/Button';
 import {useDispatch} from 'react-redux';
 import {addItem} from '../../app/basket/basket.actions';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 
 function Card({
                 id = 0,
@@ -21,7 +22,9 @@ function Card({
   return (
     <div className={'card'}>
       <div className={'card__image'}>
-        <img src={image} alt="Рюкзак"/>
+        <Link to={id.toString()} className={'card__link'}>
+          <img src={image} alt="Рюкзак"/>
+        </Link>
       </div>
       <div className={'card__content'}>
         <div className={'card-name'}>

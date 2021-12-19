@@ -6,6 +6,7 @@ export default class CardList extends React.Component {
   static defaultProps = {
     productList: []
   }
+
   render() {
     return (
       <div className={'card-list'}>

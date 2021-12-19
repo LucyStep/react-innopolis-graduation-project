@@ -12,7 +12,9 @@ function Header() {
   return (
     <header className={'header'}>
       <div className={'logo'}>
-        <img className={'logo__image'} src={logo} alt="Логотип"/>
+        <Link to={'/products'} className={'main-page-link'}>
+          <img className={'logo__image'} src={logo} alt="Логотип"/>
+        </Link>
         <h1 className={'logo__title'}>Мир рюкзаков</h1>
       </div>
       <div className={'basket'}>

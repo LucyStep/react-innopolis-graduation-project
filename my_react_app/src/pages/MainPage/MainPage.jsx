@@ -2,6 +2,7 @@ import React from 'react';
 import CardList from '../../components/CardList/CardList';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import './MainPage.css';
 
 export default class MainPage extends React.Component {
   constructor(props) {

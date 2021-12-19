@@ -35,21 +35,14 @@
     right: 47px;
 }
 
-.button_card-added {
-    width: 50px;
-    height: 50px;
-    background-color: #6ec056;
-}
-
-.button_card-added::before {
-    content: '✓';
-    position: absolute;
-    font-size: 25px;
-    top: 17px;
-    right: 44px;
-}
-
 .button_login {
     padding: 0 50px;
     font-weight: normal;
+}
+
+.button_card_details {
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: #7a49a1;
 }

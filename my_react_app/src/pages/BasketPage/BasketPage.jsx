@@ -1,20 +1,19 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './BasketPage.css';
+import Header from '../../components/Header/Header';
 import BasketItemsList from '../../components/BasketItemsList/BasketItemsList';
 import Button from '../../components/Button/Button';
 import {useSelector} from "react-redux";
 import store from "../../app/store";
 
-export default function BasketPage()
+function BasketPage()
 {
   const {basket} = useSelector(store.getState)
 
   return (
     <div className={'BasketPage'}>
-      <Link to={'/products'} className={'main-page-link'}>
-        🠔 Вернуться к списку товаров
-      </Link>
+      <Header/>
       <div className={'items-container'}>
         <h1 className={'items-title'}>Корзина с выбранными товарами</h1>
         <BasketItemsList/>
@@ -29,3 +28,5 @@ export default function BasketPage()
     </div>
   );
 }
+
+export default BasketPage;

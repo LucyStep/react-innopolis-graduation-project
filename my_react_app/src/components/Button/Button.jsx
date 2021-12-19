@@ -6,9 +6,10 @@ function Button(props) {
     <button
       onClick={props.onClick}
       className={classNames('button', {
-      'button_card': props.card,
-      'button_login': props.login
-    })}>
+        'button_card': props.card,
+        'button_login': props.login,
+        'button_card_details': props.details
+      })}>
       {props.children}
     </button>
   )
