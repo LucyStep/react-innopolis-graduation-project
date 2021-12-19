@@ -10,7 +10,7 @@ import {useParams} from 'react-router-dom';
 function ProductPage() {
   const dispatch = useDispatch();
   const addItemDispatcher = () => {
-    dispatch(addItem(id, product.image, product.name, product.price));
+    dispatch(addItem(Number(id), product.image, product.name, product.price));
   };
 
   const {id} = useParams();
