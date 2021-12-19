@@ -1,10 +1,10 @@
 import Header from '../../components/Header/Header';
 import './ProductPage.css'
 import React, {useEffect, useState} from 'react';
-import Button from "../../components/Button/Button";
-import {useDispatch} from "react-redux";
-import {addItem} from "../../app/basket/basket.actions";
-import {Link, useParams} from "react-router-dom";
+import Button from '../../components/Button/Button';
+import {useDispatch} from 'react-redux';
+import {addItem} from '../../app/basket/basket.actions';
+import {useParams} from 'react-router-dom';
 
 
 function ProductPage() {
