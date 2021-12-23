@@ -71,9 +71,6 @@ function LoginPage() {
   function onClick() {
     passwordValidation(password);
     emailValidation(email);
-    if (userCredentials.email && userCredentials.password) {
-      localStorage.setItem('credentials', JSON.stringify(userCredentials));
-    }
   }
 
   return (
