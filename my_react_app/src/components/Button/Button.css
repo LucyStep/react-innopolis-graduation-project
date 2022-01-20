@@ -1,0 +1,48 @@
+.button {
+    background-color: #7a49a1;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 16px;
+    font-size: 20px;
+    color: white;
+    height: 50px;
+}
+
+.button:hover,
+.button_card:hover {
+    background-color: rgba(136, 67, 183, 0.9);
+}
+
+.button:focus,
+.button_card:focus {
+    outline: none;
+    border: 1px solid #ffffff;
+}
+
+.button_card {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #7a49a1;
+}
+
+.button_card::before {
+    content: '+';
+    position: absolute;
+    font-size: 25px;
+    top: 20px;
+    right: 47px;
+}
+
+.button_login {
+    padding: 0 50px;
+    font-weight: normal;
+}
+
+.button_card_details {
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: #7a49a1;
+}
