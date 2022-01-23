@@ -24,7 +24,7 @@ function LoginPage() {
     return re.test(password);
   }
 
-// // Проверка имейла
+// Проверка имейла
 
   const emailValidation = (email) => {
 
@@ -44,7 +44,7 @@ function LoginPage() {
     }
   }
 
-// // Проверка пароля
+// Проверка пароля
 
   const passwordValidation = (password) => {
 
