@@ -20,9 +20,9 @@ function Header() {
       <div className={'basket'}>
         <div className={'counter'}>
           <span className={'items-counter'}>
-            товаров: {basket.itemsCount}
+            товаров: {basket.total.count}
           </span>
-          <span className={'sum-counter'}>на сумму {basket.totalPrice} ₽</span>
+          <span className={'sum-counter'}>на сумму {basket.total.price} ₽</span>
         </div>
         <Link to={'/basket'} className={'basket-page-link'}>
           <img className={'basket__image'} src={basketImg} alt="Корзина"/>

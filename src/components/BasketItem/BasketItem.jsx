@@ -1,7 +1,7 @@
 import React from 'react';
 import './BasketItem.css';
 import {useDispatch, useSelector} from 'react-redux';
-import {removeItem, removeObj, addItem} from '../../app/basket/basket.actions';
+import {removeItem, deleteObj, addItem} from '../../app/basket/basket.actions';
 import store from './../../app/store';
 
 export default function BasketItem(
@@ -24,8 +24,8 @@ export default function BasketItem(
   const addObjDispatcher = () => {
     dispatch(addItem(id,image, name, price));
   };
-  const removeObjDispatcher = () => {
-    dispatch(removeObj(id,image, name, price));
+  const deleteObjDispatcher = () => {
+    dispatch(deleteObj(id,image, name, price));
   };
 
   return (
@@ -35,13 +35,13 @@ export default function BasketItem(
         <span className={'item_name'}>{name}</span>
       </div>
       <div className={'item-quantity-wrapper'}>
-        <div className={'square square_minus'} onClick={removeObjDispatcher}/>
+        <div className={'square square_minus'} onClick={removeItemDispatcher}/>
         <span className={'item-quantity'}>{item.quantity}</span>
         <div className={'square square_plus'} onClick={addObjDispatcher}/>
       </div>
       <div className={'item-price-wrapper'}>
-        <span className={'item-price'}>{item.price * item.quantity} ₽</span>
-        <div className={'circle-delete'} onClick={removeItemDispatcher}/>
+        <span className={'item-price'}>{item.priceSum} ₽</span>
+        <div className={'circle-delete'} onClick={deleteObjDispatcher}/>
       </div>
     </div>
   )
