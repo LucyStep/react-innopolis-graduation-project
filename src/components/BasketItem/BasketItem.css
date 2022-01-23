@@ -70,7 +70,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 90px;
+    padding-left: 10px;
+    min-width: 100px;
     color: #a37e62;
 }
 
@@ -88,7 +89,7 @@
     font-size: 25px;
     line-height: 23px;
     position: absolute;
-    left: 71px;
+    left: 80px;
 }
 
 .circle-delete:hover {

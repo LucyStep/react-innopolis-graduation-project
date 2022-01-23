@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, compose} from '@reduxjs/toolkit';
+import {createStore, applyMiddleware, compose} from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import rootReducer from './root-reducer';
 
