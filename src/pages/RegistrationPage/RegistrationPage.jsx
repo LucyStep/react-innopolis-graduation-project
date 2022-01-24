@@ -1,10 +1,9 @@
-import './LoginPage.css';
+import './RegistrationPage.css';
 import React, {useState} from 'react';
 import Button from '../../components/Button/Button';
-import {Link} from 'react-router-dom';
 import {useNavigate} from 'react-router-dom';
 
-function LoginPage() {
+function RegistrationPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -13,6 +12,8 @@ function LoginPage() {
 
   const [isPasswordError, setIsPasswordError] = useState(false);
   const [passwordErrorMessage, setPasswordErrorMessage] = useState('');
+
+  const userCredentials = {};
 
   const navigate = useNavigate();
 
@@ -31,14 +32,19 @@ function LoginPage() {
   const emailValidation = (email) => {
 
     if (email !== "") {
-      if (email === localStorage.getItem('email') && validateEmail(email)) {
-        } else {
-          setIsEmailError(true);
-          setEmailErrorMessage('Что-то пошло не так! Попробуйте ещё раз');
-        }
+
+      if (validateEmail(email)) {
+        userCredentials.email = email;
+        localStorage.setItem('email', userCredentials.email);
       } else {
+        setIsEmailError(true);
+        setEmailErrorMessage('Email невалидный')
+      }
+    }
+
+    if (email === "") {
       setIsEmailError(true);
-      setEmailErrorMessage('Поле обязательно для заполнения');
+      setEmailErrorMessage('Поле обязательно для заполнения')
     }
   }
 
@@ -47,39 +53,42 @@ function LoginPage() {
   const passwordValidation = (password) => {
 
     if (password !== "") {
-      if (password === localStorage.getItem('password') && validatePassword(password)) {
+
+      if (password.length >= 8 && validatePassword(password)) {
+        userCredentials.password = password;
+        localStorage.setItem('password', userCredentials.password);
       } else {
         setIsPasswordError(true);
-        setPasswordErrorMessage('Что-то пошло не так! Попробуйте ещё раз');
+        setPasswordErrorMessage('Пароль невалидный')
       }
       if (password.length < 8) {
         setIsPasswordError(true);
         setPasswordErrorMessage('Пароль должен содержать как минимум 8 символов')
       }
-    } else {
+    }
+
+    if (password === "") {
       setIsPasswordError(true);
-      setPasswordErrorMessage('Поле обязательно для заполнения');
+      setPasswordErrorMessage('Поле обязательно для заполнения')
     }
   }
 
-  const checkLogin = () => {
-    if (
-      email === localStorage.getItem('email') &&
-      password === localStorage.getItem('password')) {
-      navigate("/products");
+  const redirect = () => {
+    if (userCredentials.email && userCredentials.password) {
+      navigate("/");
     }
   }
 
-    function onClick() {
-    passwordValidation(password);
+  function onClick() {
     emailValidation(email);
-    checkLogin();
+    passwordValidation(password);
+    redirect();
   }
 
   return (
     <div className={'container'}>
       <form className={'login'}>
-        <h1 className={'login__title'}>Вход</h1>
+        <h1 className={'login__title'}>Регистрация</h1>
         <label className={'login__label'} htmlFor={'input-email'}>
           Email
         </label>
@@ -126,14 +135,11 @@ function LoginPage() {
           </label>
         </div>
         <Button login onClick={onClick}>
-          Войти
+          Зарегистрироваться
         </Button>
-        <Link to={'/registration'} className={'register-link'}>
-          <p>Регистрация</p>
-        </Link>
       </form>
     </div>
   );
 }
 
-export default LoginPage;
+export default RegistrationPage;

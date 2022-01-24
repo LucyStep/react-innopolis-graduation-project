@@ -14,7 +14,7 @@
 
 .login {
     width: 500px;
-    height: 400px;
+    height: 430px;
     background: #FFFFFF;
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
@@ -113,4 +113,10 @@
     padding-top: 5px;
     padding-left: 10px;
     flex-shrink: 1;
+}
+
+.register-link {
+    padding-top: 15px;
+    font-weight: normal;
+    color: #8843b7;
 }
