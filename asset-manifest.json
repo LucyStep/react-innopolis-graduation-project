@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-innopolis-graduation-project/static/css/main.47995830.chunk.css",
+    "main.js": "/react-innopolis-graduation-project/static/js/main.1a9398df.chunk.js",
+    "main.js.map": "/react-innopolis-graduation-project/static/js/main.1a9398df.chunk.js.map",
+    "runtime-main.js": "/react-innopolis-graduation-project/static/js/runtime-main.c4dd80d5.js",
+    "runtime-main.js.map": "/react-innopolis-graduation-project/static/js/runtime-main.c4dd80d5.js.map",
+    "static/js/2.a32d7e60.chunk.js": "/react-innopolis-graduation-project/static/js/2.a32d7e60.chunk.js",
+    "static/js/2.a32d7e60.chunk.js.map": "/react-innopolis-graduation-project/static/js/2.a32d7e60.chunk.js.map",
+    "index.html": "/react-innopolis-graduation-project/index.html",
+    "static/css/main.47995830.chunk.css.map": "/react-innopolis-graduation-project/static/css/main.47995830.chunk.css.map",
+    "static/js/2.a32d7e60.chunk.js.LICENSE.txt": "/react-innopolis-graduation-project/static/js/2.a32d7e60.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/react-innopolis-graduation-project/static/media/Montserrat-Regular.3cd78665.ttf",
+    "static/media/LoginPage.css": "/react-innopolis-graduation-project/static/media/bg.88d1de2c.jpg",
+    "static/media/logo.644e2137.png": "/react-innopolis-graduation-project/static/media/logo.644e2137.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c4dd80d5.js",
+    "static/js/2.a32d7e60.chunk.js",
+    "static/css/main.47995830.chunk.css",
+    "static/js/main.1a9398df.chunk.js"
+  ]
+}
